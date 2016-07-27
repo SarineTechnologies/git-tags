@@ -1,7 +1,7 @@
+'use strict';
 var exports = module.exports = {};
 
 var settings = require('./settings.json'),
-    apps = settings.apps,
     GitHubApi = require("github"),
     Promise = require('bluebird');
 
@@ -26,17 +26,33 @@ github.authenticate({
     password: process.env.PASSWORD
 });
 
-exports.getTagsByApp = function(appName) {
-    return new Promise(function(resolve) {
+exports.getTagsByApp = (appName) => {
+    return new Promise((resolve) => {
         //get all tags
         var tagsArr = [];
         github.repos.getTags({
-            user: 'adica',
+            user: settings.org,
             repo: appName
         }).then((tags) => {
-            tags.forEach((tag) => {
-                tagsArr.push(tag);
+            var app = settings.apps.filter((a) => {
+                return a.repo === appName;
+            })[0];
+            tags.forEach(function(tag) {
+                //TODO
+                // app.envs.forEach(function(e) {
+                //     if (tag.name.indexOf(e) === -1 &&
+                //         tagsArr.indexOf(tag) === -1) {
+                //         console.log('e: ' + e)
+                //         tagsArr.push(tag);
+                //     }
+                // });
+                if (tag.name.indexOf('qa') === -1 &&
+                    tag.name.indexOf('stg') === -1 &&
+                    tag.name.indexOf('prod') === -1) {
+                    tagsArr.push(tag);
+                }
             });
+
             return resolve(tagsArr);
         });
     });

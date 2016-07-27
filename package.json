@@ -19,8 +19,8 @@
   "homepage": "https://github.com/adica/git-tag-generator#readme",
   "dependencies": {
     "bluebird": "^3.4.1",
+    "git-config": "0.0.7",
     "github": "^2.2.0",
-    "inquirer": "^1.1.2",
-    "prompt": "^1.0.0"
+    "inquirer": "^1.1.2"
   }
 }

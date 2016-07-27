@@ -1,8 +1,27 @@
 
 {
+	"org": "sarinetechnologies",
 	"apps" : [
-		"sarine.viewer.templates.dashboard",
-		"sarine.viewer.templates.widget",
-		"sarine.configurator"
+		{
+			"name": "BASEWIDGET",
+			"repo" : "sarine.viewer.templates.widget",
+			"envs":["qa3","qa4","stg1","prod"]
+		},
+		{
+			"name": "BASEDASHBOAD",
+			"repo" : "sarine.viewer.templates.dashboard",
+			"envs":["qa3","qa4","stg1","prod"]
+		},		
+		{
+			"name": "CONFIGURATOR",
+			"repo" : "sarine.configurator",
+			"envs":["qa3","qa4","stg1","prod"]
+		},
+		{
+			"name": "TEST",
+			"repo" : "test",
+			"envs": ["prod","aa","bb"]
+		}
+		
 	]
 }
