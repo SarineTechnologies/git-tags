@@ -1,0 +1,8 @@
+
+{
+	"apps" : [
+		"sarine.viewer.templates.dashboard",
+		"sarine.viewer.templates.widget",
+		"sarine.configurator"
+	]
+}
