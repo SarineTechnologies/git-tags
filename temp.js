@@ -1,3 +1,12 @@
+'use strict';
+
+// let github = require('./github.js');
+
+
+// github.getTag('sarine.viewer.templates.widget', 'v1.11.0').then((tag) => {
+//     console.log('tag.sha: ' + tag[0].commit.sha);
+// });
+
 var GitHubApi = require("github");
 
 //create API
@@ -10,9 +19,9 @@ github.authenticate({type: "basic",username: process.env.USERNAME,password: proc
 github.gitdata.createTag({
     user: "adica",
     repo: "test",
-    "tag": "1.0.1",
-    "message" : "this is tag 1.0.1",
-    "object" : "e49c5cd353ba336ec9d985437f9ca69e082a5706",
+    "tag": "qa3-v1.0.5",
+    "message" : "this is tag qa3-v1.0.5",
+    "object" : "a23ed879759d3a5c0c804ebcea619ec19fede456",
     "type" : "commit",
     "tagger": { name: "adica", email: "adic@tikalk.com", date: new Date()}
 
@@ -20,7 +29,7 @@ github.gitdata.createTag({
     github.gitdata.createReference({ 
         user: "adica",
         repo: "test",
-        ref : "refs/tags/1.0.1",
+        ref : "refs/tags/qa3-v1.0.5",
         sha: newTag.sha
      }).then((resp)=>{
         console.log('done')

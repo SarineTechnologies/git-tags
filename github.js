@@ -3,7 +3,9 @@ var exports = module.exports = {};
 
 var settings = require('./settings.json'),
     GitHubApi = require("github"),
-    Promise = require('bluebird');
+    Promise = require('bluebird'),
+    gitConfig = require('git-config'),
+    config = gitConfig.sync();
 
 //create API
 var github = new GitHubApi({
@@ -38,14 +40,6 @@ exports.getTagsByApp = (appName) => {
                 return a.repo === appName;
             })[0];
             tags.forEach(function(tag) {
-                //TODO
-                // app.envs.forEach(function(e) {
-                //     if (tag.name.indexOf(e) === -1 &&
-                //         tagsArr.indexOf(tag) === -1) {
-                //         console.log('e: ' + e)
-                //         tagsArr.push(tag);
-                //     }
-                // });
                 if (tag.name.indexOf('qa') === -1 &&
                     tag.name.indexOf('stg') === -1 &&
                     tag.name.indexOf('prod') === -1) {
@@ -56,30 +50,61 @@ exports.getTagsByApp = (appName) => {
             return resolve(tagsArr);
         });
     });
+}
 
+exports.getTag = (appName, tagName) => {
+    return new Promise((resolve, reject) => {
+
+        exports.getTagsByApp(appName).then((tags) => {
+            let selected = tags.filter((t) => {
+                return t.name === tagName;
+            });
+            if (selected)
+                return resolve(selected);
+            else
+                return reject("can't find tag: " + tagName + ' on: ' + appName);
+        });
+    });
 
 }
 
-//create tag
-/*github.gitdata.createTag({
-    user: "adica",
-    repo: "test",
-    "tag": "1.0.1",
-    "message" : "this is tag 1.0.1",
-    "object" : "e49c5cd353ba336ec9d985437f9ca69e082a5706",
-    "type" : "commit",
-    "tagger": { name: "adica", email: "adic@tikalk.com", date: new Date()}
 
-}).then((newTag) => {
-    github.gitdata.createReference({ 
-        user: "adica",
-        repo: "test",
-        ref : "refs/tags/1.0.1",
-        sha: newTag.sha
-     }).then((resp)=>{
-        console.log('done')
+exports.createTag = (repo, tagName, env, gitObjectString, user, email) => {
+    return new Promise((resolve) => {
+        let tagNewName = env + '-' + tagName,
+            message = "tag " + tagNewName;
+
+        
+        //create tag
+        github.gitdata.createTag({
+            user: user,
+            repo: repo,
+            "tag": tagNewName,
+            "message": message,
+            "object": gitObjectString,
+            "type": "commit",
+            "tagger": {
+                name: user,
+                email: email,
+                date: new Date()
+            }
+
+        }).then((newTag) => {
+            github.gitdata.createReference({
+                user: user,
+                repo: repo,
+                ref: "refs/tags/" + tagNewName,
+                sha: newTag.sha
+            }).then((resp) => {
+                console.log('done!');
+                return resolve(resp);
+            });
+        });
     });
-});*/
+
+}
+
+
 
 // github.repos.getAll({}).then((repos) =>{
 //  //apps.forEach((app) => {

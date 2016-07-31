@@ -22,6 +22,11 @@ credPrompt = [{
     message: 'Enter your git password',
     name: 'password',
     default: config.user.password
+}, {
+    type: 'input',
+    message: 'Enter your email',
+    name: 'email',
+    default: config.user.email
 }];
 
 applicationsPrompt = {
@@ -62,7 +67,8 @@ envsPrompt = {
 selected = {
     app: '',
     tag: '',
-    env: ''
+    env: '',
+    repo: ''
 }
 
 function setCreds() {
@@ -82,7 +88,7 @@ function chooseApp() {
             return a.name === selected.app;
         })[0];
         envsPrompt.choices = selectedApp.envs;
-
+        selected.repo = selectedApp.repo;
         github.getTagsByApp(selectedApp.repo).then((arr) => {
             tagsPrompt.choices = arr;
 
@@ -111,8 +117,22 @@ function chooseEnv() {
 
 function approve() {
     inquirer.prompt(approvePrompt).then((answers) => {
-        if(answers.approve){
-            console.log('do it youreslf!!')
+        if (answers.approve === 'y') {
+            github.getTag(selected.repo, selected.tag)
+                .then((tag) => {
+                    github.createTag(selected.repo,
+                            selected.tag,
+                            selected.env,
+                            tag[0].commit.sha,
+                            process.env.USERNAME,
+                            "adic@tikalk.com")//todo
+                        .then((res) => {
+                            console.log('res: ' + res);
+
+                        });
+                });
+        } else {
+            console.log('no problem, maybe next time :)')
         }
     });
 }
