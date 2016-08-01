@@ -13,26 +13,32 @@ var GitHubApi = require("github");
 var github = new GitHubApi({});
 
 //auth
-github.authenticate({type: "basic",username: process.env.USERNAME,password: process.env.PASSWORD});
+github.authenticate({ type: "basic", username: process.env.USERNAME, password: process.env.PASSWORD });
 
 //create tag
-github.gitdata.createTag({
+const promise = github.gitdata.createTag({
     user: "adica",
-    repo: "test",
-    "tag": "qa3-v1.0.5",
-    "message" : "this is tag qa3-v1.0.5",
-    "object" : "a23ed879759d3a5c0c804ebcea619ec19fede456",
-    "type" : "commit",
-    "tagger": { name: "adica", email: "adic@tikalk.com", date: new Date()}
+    repo: "sarine.viewer.templates.widget",
+    "tag": "temp",
+    "message": "this is temp tag",
+    "object": "9452a7c65dea101627823c1631d692216efe99b1",
+    "type": "commit",
+    "tagger": { name: "adica", email: "adic@tikalk.com", date: new Date() }
 
-}).then((newTag) => {    
-    github.gitdata.createReference({ 
+});
+
+promise.then((newTag) => {
+    github.gitdata.createReference({
         user: "adica",
-        repo: "test",
-        ref : "refs/tags/qa3-v1.0.5",
+        repo: "sarine.viewer.templates.widget",
+        ref: "refs/tags/temp",
         sha: newTag.sha
-     }).then((resp)=>{
+    }).then((resp) => {
         console.log('done')
     });
-    
+
+});
+
+promise.catch((reason)=>{
+	console.log('Error: '+ reason)
 });

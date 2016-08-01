@@ -5,7 +5,7 @@
 		{
 			"name": "BASEWIDGET",
 			"repo" : "sarine.viewer.templates.widget",
-			"envs":["qa3","qa4","stg1","prod"]
+			"envs":["qa3","qa4","stg1","prod", "temp"]
 		},
 		{
 			"name": "BASEDASHBOAD",

@@ -74,10 +74,10 @@ exports.createTag = (repo, tagName, env, gitObjectString, user, email) => {
         let tagNewName = env + '-' + tagName,
             message = "tag " + tagNewName;
 
-        
+
         //create tag
         github.gitdata.createTag({
-            user: user,
+            user: settings.org,
             repo: repo,
             "tag": tagNewName,
             "message": message,
@@ -91,12 +91,11 @@ exports.createTag = (repo, tagName, env, gitObjectString, user, email) => {
 
         }).then((newTag) => {
             github.gitdata.createReference({
-                user: user,
+                user: settings.org,
                 repo: repo,
                 ref: "refs/tags/" + tagNewName,
                 sha: newTag.sha
             }).then((resp) => {
-                console.log('done!');
                 return resolve(resp);
             });
         });

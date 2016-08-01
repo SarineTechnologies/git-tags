@@ -127,8 +127,7 @@ function approve() {
                             process.env.USERNAME,
                             "adic@tikalk.com")//todo
                         .then((res) => {
-                            console.log('res: ' + res);
-
+                            console.log('Done! new tag created: ' + selected.env + '-' + selected.tag);
                         });
                 });
         } else {
