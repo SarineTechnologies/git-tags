@@ -1,7 +1,7 @@
 'use strict';
 
 let inquirer = require('inquirer'),
-    github = require('./github.js'),
+    github,
     gitConfig = require('git-config'),
     config = gitConfig.sync(),
     apps = require('./settings.json').apps,
@@ -75,6 +75,7 @@ function setCreds() {
     inquirer.prompt(credPrompt).then((answers) => {
         process.env.USERNAME = answers.user;
         process.env.PASSWORD = answers.password;
+        github = require('./github.js')
         chooseApp();
     });
 
