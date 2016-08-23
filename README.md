@@ -13,5 +13,21 @@ It can be used for CI/CD systems that uploads version into relevant environment 
 * change the settings.json `apps` array to include all relevant apps you want to use
 * for each `app`:
   * set display name (`name`)
-  * set the repo name (`repo`)
+  * set the repository name (`repo`)
   * set the environments names you want to use(`envs`) 
+
+## Running
+* `npm install`
+* `npm run`
+* answer the prompt questions
+
+## Result
+This tool will upload copy of the selected `git tag` into your GitHub account with new name based on this pattern: 
+```js
+{{ env }}-{{ git-tag-name }}
+```
+* set your CI/CD to run automated build whenever a new `git tag` is created
+* set your CI/CD to upload a new version of this `git-tag-name` into the relevant `env`
+
+  
+  
