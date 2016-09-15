@@ -5,7 +5,7 @@
 		{
 			"name": "BASEWIDGET",
 			"repo" : "sarine.viewer.templates.widget",
-			"envs":["qa3","qa4","stg1","prod", "temp"]
+			"envs":["qa3","qa4","qa5", "stg1","prod", "temp"]
 		},
 		{
 			"name": "BASEDASHBOAD",
@@ -18,9 +18,9 @@
 			"envs":["qa3","qa4","stg1","prod"]
 		},
 		{
-			"name": "TEST",
-			"repo" : "test",
-			"envs": ["prod","aa","bb"]
+			"name": "BASEFULLSCREEN",
+			"repo" : "sarine.viewer.templates.fullscreen",
+			"envs":["qa3","qa4","stg1","prod"]
 		}
 		
 	]
