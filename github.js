@@ -22,11 +22,11 @@ var github = new GitHubApi({
 });
 
 //auth
-github.authenticate({
-    type: "basic",
-    username: process.env.USERNAME,
-    password: process.env.PASSWORD
-});
+//github.authenticate({
+//    type: "basic",
+//    username: process.env.USERNAME,
+//    password: process.env.PASSWORD
+//});
 
 exports.getTagsByApp = (appName) => {
     return new Promise((resolve) => {
