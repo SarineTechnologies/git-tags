@@ -22,6 +22,11 @@
 			"repo" : "sarine.viewer.templates.fullscreen",
 			"envs":["qa3","qa4","stg1","prod"]
 		}
-		
+		,
+		{
+			"name": "BASEJEWELRY",
+			"repo" : "sarine.viewer.templates.jewelry",
+			"envs":["qa3","qa4","stg1","prod"]
+		}
 	]
 }
