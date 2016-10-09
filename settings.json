@@ -28,5 +28,11 @@
 			"repo" : "sarine.viewer.templates.jewelry",
 			"envs":["qa3","qa4","stg1","prod"]
 		}
+		,
+		{
+			"name": "3DFULLINSPECTION",
+			"repo" : "sarine.viewer.3dfullinspection",
+			"envs":["qa3","qa4","stg1","prod"]
+		}
 	]
 }
