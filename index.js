@@ -75,6 +75,7 @@ function setCreds() {
     inquirer.prompt(credPrompt).then((answers) => {
         process.env.USERNAME = answers.user;
         process.env.PASSWORD = answers.password;
+        process.env.EMAIL = answers.email;        
         github = require('./github.js')
         chooseApp();
     });
@@ -126,7 +127,7 @@ function approve() {
                             selected.env,
                             tag[0].commit.sha,
                             process.env.USERNAME,
-                            "adic@tikalk.com")//todo
+                            process.env.EMAIL)
                         .then((res) => {
                             console.log('Done! new tag created: ' + selected.env + '-' + selected.tag);
                         });
