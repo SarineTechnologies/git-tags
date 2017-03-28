@@ -9,6 +9,12 @@ This repo will help you to get your existing `git tags`, copy them, rename them 
 It can be used for CI/CD systems that uploads version into relevant environment based on the `git tag` name.
 
 ## Settings
+* make sure that your C:\Users\\%USERNAME%\\.gitconfig file contains default GitHub details:
+```
+[user]
+  name = Your GitHub user
+  email = Your email
+```
 * change the settings.json `org` to your organisation Git name
 * change the settings.json `apps` array to include all relevant apps you want to use
 * for each `app`:
