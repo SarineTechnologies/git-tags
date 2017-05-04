@@ -5,34 +5,40 @@
 		{
 			"name": "BASEWIDGET",
 			"repo" : "sarine.viewer.templates.widget",
-			"envs":["qa3","qa4","qa5", "stg1","prod", "temp"]
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
 			"name": "BASEDASHBOAD",
 			"repo" : "sarine.viewer.templates.dashboard",
-			"envs":["qa3","qa4","stg1","prod"]
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},		
 		{
 			"name": "CONFIGURATOR",
 			"repo" : "sarine.configurator",
-			"envs":["qa3","qa4","stg1","prod"]
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
 			"name": "BASEFULLSCREEN",
 			"repo" : "sarine.viewer.templates.fullscreen",
-			"envs":["qa3","qa4","stg1","prod"]
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 		,
 		{
 			"name": "BASEJEWELRY",
 			"repo" : "sarine.viewer.templates.jewelry",
-			"envs":["qa3","qa4","stg1","prod"]
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		}
+		,
+		{
+			"name": "CUT3D",
+			"repo" : "sarine.viewer.cut3d",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 		,
 		{
 			"name": "3DFULLINSPECTION",
 			"repo" : "sarine.viewer.3dfullinspection",
-			"envs":["qa3","qa4","stg1","prod"]
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
 }
