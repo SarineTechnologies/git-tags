@@ -18,6 +18,11 @@
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
+			"name": "BASELOUPELOCAL",
+			"repo" : "sarine.viewer.templates.loupelocal",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
 			"name": "BASEFULLSCREEN",
 			"repo" : "sarine.viewer.templates.fullscreen",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
