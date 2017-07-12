@@ -3,23 +3,28 @@
 	"org": "sarinetechnologies",
 	"apps" : [
 		{
-			"name": "BASEWIDGET",
-			"repo" : "sarine.viewer.templates.widget",
-			"envs":["qa3","qa4","qa5","stg1","prod"]
-		},
-		{
 			"name": "BASEDASHBOAD",
 			"repo" : "sarine.viewer.templates.dashboard",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
-		},		
-		{
-			"name": "CONFIGURATOR",
-			"repo" : "sarine.configurator",
-			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
+		{
+			"name": "BASEWIDGET",
+			"repo" : "sarine.viewer.templates.widget",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},				
 		{
 			"name": "BASELOUPELOCAL",
 			"repo" : "sarine.viewer.templates.loupelocal",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "BASELIGHTCLEAN",
+			"repo" : "sarine.viewer.templates.lightclean",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "BASE2DCUTCLEAN",
+			"repo" : "sarine.viewer.templates.2dcutclean",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
@@ -35,19 +40,24 @@
 		}
 		,
 		{
+			"name": "CONFIGURATOR",
+			"repo" : "sarine.configurator",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
 			"name": "CUT3D",
 			"repo" : "sarine.viewer.cut3d",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 		,
 		{
-			"name": "3DFULLINSPECTION",
-			"repo" : "sarine.viewer.3dfullinspection",
+			"name": "COMMONRESOURCES",
+			"repo" : "sarine.viewer.common.text",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
-			"name": "COMMONRESOURCES",
-			"repo" : "sarine.viewer.common.text",
+			"name": "3DFULLINSPECTION",
+			"repo" : "sarine.viewer.3dfullinspection",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
