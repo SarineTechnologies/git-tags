@@ -51,6 +51,11 @@
 		}
 		,
 		{
+			"name": "GEMPRINT",
+			"repo" : "sarine.viewer.gemprint",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
 			"name": "COMMONRESOURCES",
 			"repo" : "sarine.viewer.common.text",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
