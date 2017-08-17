@@ -64,6 +64,11 @@
 			"name": "3DFULLINSPECTION",
 			"repo" : "sarine.viewer.3dfullinspection",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "3DFULLINSPECTION.ASSETS",
+			"repo" : "sarine.viewer.3dfullinspection.assets",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
 }

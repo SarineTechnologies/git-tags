@@ -1,6 +1,6 @@
 {
   "name": "git-tag-generator",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "duplicate git tags for CI/CD useage",
   "main": "index.js",
   "scripts": {
