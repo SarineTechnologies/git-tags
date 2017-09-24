@@ -69,6 +69,17 @@
 			"name": "3DFULLINSPECTION.ASSETS",
 			"repo" : "sarine.viewer.3dfullinspection.assets",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "R2P",
+			"repo" : "sarine.viewer.templates.r2p",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		}
+		,
+		{
+			"name": "VIEWER.CREATOR",
+			"repo" : "sarine.viewer.creator",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
 }
