@@ -71,7 +71,7 @@
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
-			"name": "R2P",
+			"name": "BASER2P",
 			"repo" : "sarine.viewer.templates.r2p",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
