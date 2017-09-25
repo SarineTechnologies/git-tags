@@ -86,6 +86,11 @@
 			"name": "ROUGHVIEWER",
 			"repo" : "sarine.viewer.rough",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "STLVIEWER",
+			"repo" : "sarine.viewer.stl",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
 }
