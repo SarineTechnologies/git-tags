@@ -48,6 +48,11 @@
 			"name": "CUT3D",
 			"repo" : "sarine.viewer.cut3d",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "LIGHT",
+			"repo" : "sarine.viewer.dynamic.light",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 		,
 		{
