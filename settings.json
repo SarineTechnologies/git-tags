@@ -106,6 +106,13 @@
 			"name": "ATOM-GEMPRINT",
 			"repo" : "sarine.viewer.gemprint",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "IMAGE",
+			"repo" : "sarine.viewer.image",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+
+
 		}
 	]
 }
