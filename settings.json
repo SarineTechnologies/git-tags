@@ -91,6 +91,16 @@
 			"name": "STLVIEWER",
 			"repo" : "sarine.viewer.stl",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "SVG",
+			"repo" : "sarine.viewer.svg",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "Image",
+			"repo" : "sarine.viewer.image",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
 }
