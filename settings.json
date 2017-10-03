@@ -45,29 +45,8 @@
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
-			"name": "CUT3D",
-			"repo" : "sarine.viewer.cut3d",
-			"envs":["qa3","qa4","qa5","stg1","prod"]
-		},
-		{
-			"name": "LIGHT",
-			"repo" : "sarine.viewer.dynamic.light",
-			"envs":["qa3","qa4","qa5","stg1","prod"]
-		}
-		,
-		{
-			"name": "GEMPRINT",
-			"repo" : "sarine.viewer.gemprint",
-			"envs":["qa3","qa4","qa5","stg1","prod"]
-		},
-		{
 			"name": "COMMONRESOURCES",
 			"repo" : "sarine.viewer.common.text",
-			"envs":["qa3","qa4","qa5","stg1","prod"]
-		},
-		{
-			"name": "3DFULLINSPECTION",
-			"repo" : "sarine.viewer.3dfullinspection",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
@@ -88,23 +67,44 @@
 		}
 		,
 		{
-			"name": "ROUGHVIEWER",
+			"name": "ATOM-ROUGH",
 			"repo" : "sarine.viewer.rough",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
-			"name": "STLVIEWER",
+			"name": "ATOM-STL",
 			"repo" : "sarine.viewer.stl",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
-			"name": "SVG",
+			"name": "ATOM-SVG",
 			"repo" : "sarine.viewer.svg",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
-			"name": "Image",
+			"name": "ATOM-IMAGE",
 			"repo" : "sarine.viewer.image",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "ATOM-3DFULLINSPECTION",
+			"repo" : "sarine.viewer.3dfullinspection",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "ATOM-CUT3D",
+			"repo" : "sarine.viewer.cut3d",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "ATOM-LIGHT",
+			"repo" : "sarine.viewer.dynamic.light",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		}
+		,
+		{
+			"name": "ATOM-GEMPRINT",
+			"repo" : "sarine.viewer.gemprint",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
