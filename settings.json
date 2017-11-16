@@ -3,6 +3,11 @@
 	"org": "sarinetechnologies",
 	"apps" : [
 		{
+			"name": "JSONS",
+			"repo" : "sarine.viewer.jsons",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
 			"name": "BASEDASHBOAD",
 			"repo" : "sarine.viewer.templates.dashboard",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
