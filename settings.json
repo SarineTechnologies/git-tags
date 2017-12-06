@@ -118,6 +118,11 @@
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
+			"name": "ATOM-COLOR",
+			"repo" : "sarine.viewer.color",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
 			"name": "THREESIXTY",
 			"repo" : "sarine.viewer.threesixty",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
