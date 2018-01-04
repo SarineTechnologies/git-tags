@@ -16,6 +16,16 @@
 			"name": "BASEWIDGET",
 			"repo" : "sarine.viewer.templates.widget",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "BASER2P",
+			"repo" : "sarine.viewer.templates.r2p",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "BASEKINGSONE",
+			"repo" : "sarine.viewer.templates.kingsone",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},				
 		{
 			"name": "BASELOUPELOCAL",
@@ -50,7 +60,7 @@
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
-			"name": "COMMONRESOURCES",
+			"name": "COMMON.TEXT",
 			"repo" : "sarine.viewer.common.text",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
@@ -59,12 +69,6 @@
 			"repo" : "sarine.viewer.3dfullinspection.assets",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
-		{
-			"name": "BASER2P",
-			"repo" : "sarine.viewer.templates.r2p",
-			"envs":["qa3","qa4","qa5","stg1","prod"]
-		}
-		,
 		{
 			"name": "VIEWER.CREATOR",
 			"repo" : "sarine.viewer.creator",
