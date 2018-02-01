@@ -127,13 +127,18 @@
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
-			"name": "ATOM-EXTERNAL-PDF",
+			"name": "ATOM-PDF",
 			"repo" : "sarine.viewer.pdf",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
 			"name": "THREESIXTY",
 			"repo" : "sarine.viewer.threesixty",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "VIEWER-PDF",
+			"repo" : "sarine.pdfviewer.js",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
