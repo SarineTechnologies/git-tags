@@ -73,8 +73,12 @@
 			"name": "VIEWER.CREATOR",
 			"repo" : "sarine.viewer.creator",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
-		}
-		,
+		},
+		{
+			"name": "VIEWER.CREATOR.DEMO",
+			"repo" : "sarine.viewer.creator.demo",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
 		{
 			"name": "ATOM-ROUGH",
 			"repo" : "sarine.viewer.rough",
