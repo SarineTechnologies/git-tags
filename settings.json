@@ -144,6 +144,16 @@
 			"name": "VIEWER-PDF",
 			"repo" : "sarine.pdfviewer.js",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "DYNAMIC-IMAGE",
+			"repo" : "sarine.viewer.dynamic.image",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "DYNAMIC-SPRITE",
+			"repo" : "sarine.viewer.dynamic.sprite",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
 }
