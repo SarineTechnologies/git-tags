@@ -154,6 +154,11 @@
 			"name": "VIEWER-PDF",
 			"repo" : "sarine.pdfviewer.js",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
+			"name": "PLUGIN-IMGPLAYER",
+			"repo" : "sarine.plugin.imgplayer",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
 		}
 	]
 }
