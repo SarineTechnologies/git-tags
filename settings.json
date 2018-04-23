@@ -146,6 +146,11 @@
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
+			"name": "ATOM-360-PLAYER",
+			"repo" : "sarine.viewer.360player",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
 			"name": "THREESIXTY",
 			"repo" : "sarine.viewer.threesixty",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
