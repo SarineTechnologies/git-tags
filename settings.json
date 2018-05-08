@@ -65,6 +65,11 @@
 			"envs":["qa3","qa4","qa5","stg1","prod"]
 		},
 		{
+			"name": "COMMON.ASSETS",
+			"repo" : "sarine.viewer.common.assets",
+			"envs":["qa3","qa4","qa5","stg1","prod"]
+		},
+		{
 			"name": "3DFULLINSPECTION.ASSETS",
 			"repo" : "sarine.viewer.3dfullinspection.assets",
 			"envs":["qa3","qa4","qa5","stg1","prod"]
